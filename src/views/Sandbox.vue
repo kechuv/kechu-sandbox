@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     backNav(){
-      if( this.$route.fullPath === "/sandbox/menu"){
+      if( this.$route.fullPath === "/sandbox/menu" || window.history.length === 1){
         this.$router.replace('/');
       }else{
         this.$router.go(-1);
@@ -49,7 +49,7 @@ export default {
       color: $blanco;
       text-align: center;
       text-decoration: none;
-      transition: 0.3s ease;
+      //transition: 0.3s ease;
       h2, small{
         margin: 0px;
       }

@@ -27,7 +27,15 @@ export default {
           role: "JavaScript/SVG",
           title: "Draw Scroll SVG",
           link: "draw-scroll",
-          linkTxt: "Ir a Sandbox"
+          linkTxt: "Ir al Sandbox"
+        },
+        parallax: {
+          img: "",
+          alt: "Parallax preview",
+          role: "HTML/CSS/JS",
+          title: "Paralax Demo",
+          link: "parallax-demo",
+          linkTxt: "Ir al Sandbox"
         }
       }
     };

@@ -70,6 +70,8 @@ html, body{
     font-family: 'Raleway', sans-serif;
     background-color: $negro;
     color: $blanco;
+    position: relative;
+    z-index: 5;
     @include desktop() {
       height: 70%;
       font-size: 120%;
