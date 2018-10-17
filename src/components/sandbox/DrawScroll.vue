@@ -5,7 +5,9 @@
       <p>
         ¡Has scroll hasta abajo y observa las líneas bajar!
         <br><br>
-        Hasta este ejercicio ignoraba todo acerca de las animaciones con SVG, y la verdad se me hizo difícil lograr el resultado esperado. Así que estaré actualizando este <b>Sandbox</b> con ejercicios cada vez más complejos 😉
+        Hasta este ejercicio ignoraba todo acerca de las animaciones con SVG, y la verdad se me hizo difícil lograr el resultado esperado. Así que estaré actualizando este <b>Sandbox</b> con ejercicios cada vez más complejos 😉.
+        <br><br>
+        Puedes encontrar el ejercicio <a href="https://github.com/kechuv/kechu-sandbox/blob/f2f39cea7d27b808a07dd71d66e69b63874edb1b/src/components/sandbox/DrawScroll.vue" target="_blank">aquí</a>.
       </p>
     </article>
     <svg id="mySVG">
@@ -20,12 +22,12 @@
 <script>
 export default {
   name: "drawscroll",
-  data(){
-    return{
-      scrolled: false,
-    }
+  data() {
+    return {
+      scrolled: false
+    };
   },
-  mounted(){
+  mounted() {
     var self = this;
     var line1 = document.getElementById("line-red");
     var line2 = document.getElementById("line-blue");
@@ -40,8 +42,11 @@ export default {
     window.addEventListener("scroll", myFunction);
     function myFunction() {
       self.scrolled = window.scrollY > 100;
-      var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-      var draw = length * (scrollpercent*0.999);
+      var scrollpercent =
+        (document.body.scrollTop + document.documentElement.scrollTop) /
+        (document.documentElement.scrollHeight -
+          document.documentElement.clientHeight);
+      var draw = length * (scrollpercent * 0.999);
       // Reverse the drawing (when scrolling upwards)
       line1.style.strokeDashoffset = length - draw;
       line2.style.strokeDashoffset = length - draw;
@@ -52,26 +57,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/styles.scss';
+@import "../../assets/styles.scss";
 
 #draw-scroll {
   height: 200vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  #text{
+  #text {
     position: sticky;
     top: 50%;
     width: 85%;
-    transition: .1s ease;
-    &.scrolled{
+    transition: 0.1s ease;
+    &.scrolled {
       transform: translateY(-50%);
     }
-    p{
-      font-family: 'Quicksand', sans-serif;
+    p {
+      font-family: "Quicksand", sans-serif;
     }
   }
-  #mySVG{
+  #mySVG {
     width: 32px;
     height: 100vh;
     position: fixed;
