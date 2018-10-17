@@ -7,7 +7,7 @@
         <br><br>
         Hasta este ejercicio ignoraba todo acerca de las animaciones con SVG, y la verdad se me hizo difícil lograr el resultado esperado. Así que estaré actualizando este <b>Sandbox</b> con ejercicios cada vez más complejos 😉.
         <br><br>
-        Puedes encontrar el ejercicio <a href="https://github.com/kechuv/kechu-sandbox/blob/f2f39cea7d27b808a07dd71d66e69b63874edb1b/src/components/sandbox/DrawScroll.vue" target="_blank">aquí</a>.
+        Puedes encontrar el código <a href="https://github.com/kechuv/kechu-sandbox/blob/f2f39cea7d27b808a07dd71d66e69b63874edb1b/src/components/sandbox/DrawScroll.vue" target="_blank">aquí</a>.
       </p>
     </article>
     <svg id="mySVG">
@@ -74,6 +74,10 @@ export default {
     }
     p {
       font-family: "Quicksand", sans-serif;
+      a {
+        color: $rojo;
+        font-weight: bold;
+      }
     }
   }
   #mySVG {
