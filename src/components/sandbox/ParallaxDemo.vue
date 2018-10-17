@@ -1,5 +1,5 @@
 <template>
-  <div>Parallax Demo</div>
+  <div>Próximamente: Parallax Demo</div>
 </template>
 
 <script>
