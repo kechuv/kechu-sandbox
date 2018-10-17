@@ -4,16 +4,24 @@
       <h2 class="title">K://Trabajo</h2>
       <div class="container wrapper-flex">
         <CardSlot id="sandbox-card">
-          <router-link id="sandbox-img" class="wrapper-flex" to="/sandbox/menu" slot="header"><h2>Sandbox</h2></router-link>
+          <router-link id="sandbox-img" class="wrapper-flex" to="/sandbox/menu" slot="header">
+            <h2>Sandbox</h2>
+          </router-link>
           <small slot="role">Desarrollo Web</small>
           <h3 slot="title">Sandbox</h3>
-          <small slot="footer"><router-link to="/sandbox/menu">Ir al menú de Sandbox</router-link></small>
+          <small slot="footer">
+            <router-link to="/sandbox/menu">Ir al menú de Sandbox</router-link>
+          </small>
         </CardSlot>
         <CardSlot v-for="project in projects" :key="project.id">
-          <a slot="header" :href=project.link target="_blank"><img :src=project.img :alt=project.alt></a>
+          <a slot="header" :href=project.link target="_blank">
+            <img :src=project.img :alt=project.alt>
+          </a>
           <small slot="role">{{project.role}}</small>
           <h3 slot="title">{{project.title}}</h3>
-          <small slot="footer"><a :href=project.link target="_blank">{{project.linkTxt}}</a></small>
+          <small slot="footer">
+            <a :href=project.link target="_blank">{{project.linkTxt}}</a>
+          </small>
         </CardSlot>
       </div>
     </div>
@@ -38,10 +46,26 @@ export default {
           title: "Pop It Creativos",
           link: "https://www.popitcreativos.com",
           linkTxt: "popitcreativos.com",
+        },
+        aTeam: {
+          img: require("../assets/img/logo_original_web.png"),
+          alt: "Fitness Team Logo",
+          role: "Diseño de logotipo",
+          title: "Logo: Equipo Fitness",
+          link: "",
+          linkTxt: "",
         }
       },
     }
   },
+  updated() {
+    var elms = [document.querySelectorAll('.card a[target="_blank"]')[2], document.querySelectorAll('.card a[target="_blank"]')[3]];
+    elms.forEach(function(el){
+      el.addEventListener("click", function(event){
+        event.preventDefault();
+      });
+    })
+  }
   /*props: {
     msg: String
   }*/
@@ -102,8 +126,11 @@ export default {
       width: 100%;
       height: 100%;
       text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img{
-        height: 100%;
+       max-height: 100%;
       }
     }
   }
