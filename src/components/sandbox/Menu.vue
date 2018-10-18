@@ -22,7 +22,7 @@ export default {
     return {
       sandboxes: {
         drawScroll: {
-          img: "",
+          img: require("../../assets/img/Drawscoll_preview.png"),
           alt: "Draw Scroll Test",
           role: "JavaScript/SVG",
           title: "Draw Scroll SVG",
@@ -52,13 +52,14 @@ export default {
     flex-wrap: wrap;
     justify-content: space-around;
     max-width: 1000px;
-    
-    header a{
+
+    header a {
       width: 100%;
       height: 100%;
       text-align: center;
-      img{
-        height: 100%;
+      img {
+        width: 100%;
+        // height: 100%;
       }
     }
   }

@@ -22,12 +22,12 @@
 <script>
 export default {
   mounted: () => {
-    var el1 = document.querySelectorAll('#main-head .subtitle')[0];
-    var el2 = document.querySelectorAll('#main-head .description')[0];
-    setTimeout(function(){
-      el1.classList.add('sub-anim');
-      setTimeout(function(){
-        el2.classList.add('desc-anim');
+    var el1 = document.querySelectorAll("#main-head .subtitle")[0];
+    var el2 = document.querySelectorAll("#main-head .description")[0];
+    setTimeout(function() {
+      el1.classList.add("sub-anim");
+      setTimeout(function() {
+        el2.classList.add("desc-anim");
       }, 200);
     }, 1000);
   }
@@ -35,13 +35,15 @@ export default {
 </script>
 
 <style lang="scss">
-@import './assets/styles.scss';
+@import "./assets/styles.scss";
 
 html {
   text-rendering: optimizeLegibility;
 }
 
-html, body{
+html,
+body {
+  background-color: $blanco;
   @extend %full-screen;
   font-size: 100%;
   @include tablet-landscape() {
@@ -56,18 +58,20 @@ html, body{
 }
 #app {
   @extend %full-screen;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   background-color: #f0f1f2;
-  color: #232528;
-  h1,h2,p{
+  color: $negro;
+  h1,
+  h2,
+  p {
     margin: 0px;
   }
-  a{
+  a {
     cursor: pointer;
   }
-  
-  #main-head{
-    font-family: 'Raleway', sans-serif;
+
+  #main-head {
+    font-family: "Raleway", sans-serif;
     background-color: $negro;
     color: $blanco;
     position: relative;
@@ -76,8 +80,8 @@ html, body{
       height: 70%;
       font-size: 120%;
     }
-    
-    .wrapper{
+
+    .wrapper {
       @include tablet-portrait() {
         width: 65%;
       }
@@ -85,7 +89,7 @@ html, body{
         width: 60%;
       }
     }
-    .wrapper-grid{
+    .wrapper-grid {
       grid-template-rows: auto auto 1fr 1fr 1fr auto;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-gap: 10px;
@@ -102,7 +106,7 @@ html, body{
       }
     }
 
-    .title{
+    .title {
       grid-area: 2/1/3/6;
       color: $rojo;
       font-weight: 700;
@@ -110,7 +114,7 @@ html, body{
       text-transform: uppercase;
       align-self: end;
     }
-    .subtitle{
+    .subtitle {
       grid-area: 3/5/6/6;
       font-weight: 400;
       writing-mode: vertical-rl;
@@ -118,29 +122,29 @@ html, body{
       margin-top: -10px;
       white-space: nowrap;
       position: relative;
-      &:after{
-        content: '';
+      &:after {
+        content: "";
         position: absolute;
         top: 0;
         right: 0;
         height: 0%;
-        transition: .3s ease;
+        transition: 0.3s ease;
         border-right: 3px solid $azul;
       }
-      &.sub-anim{
-        &:after{
+      &.sub-anim {
+        &:after {
           border-right: 3px solid $azul;
           height: 100%;
         }
       }
-      b{
+      b {
         color: $azul;
       }
-      i{
+      i {
         font-weight: 200;
       }
     }
-    .description{
+    .description {
       grid-area: 4/1/6/4;
       margin: 0px;
       align-self: end;
@@ -155,28 +159,26 @@ html, body{
       @include desktop() {
         padding-left: 15px;
       }
-      &:after{
-        content: '';
+      &:after {
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
         height: 0%;
-        transition: .3s ease;
+        transition: 0.3s ease;
         border-left: 3px solid $amarillo;
       }
-      &.desc-anim{
-        &:after{
+      &.desc-anim {
+        &:after {
           border-left: 3px solid $amarillo;
           height: 100%;
         }
       }
-      b{
+      b {
         color: $amarillo;
       }
     }
-
   }
-
 }
 /*#nav {
   padding: 30px;
