@@ -1,6 +1,19 @@
 .DS_Store
 node_modules
-/dist
+.firebase
+%RESOURCE_DIR%
+./build
+./config
+./dist
+./functions
+.babelrc
+.editorconfig
+.eslintrc.js
+.firebaserc
+.postcssrc.js
+firebase.json
+firestore.indexes.json
+firestore.rules
 
 # local env files
 .env.local
