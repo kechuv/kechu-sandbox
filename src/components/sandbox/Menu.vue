@@ -22,7 +22,7 @@ export default {
     return {
       sandboxes: {
         drawScroll: {
-          img: require("../../assets/img/Drawscoll_preview.png"),
+          img: require("../../assets/img/Drawscroll_preview.png"),
           alt: "Draw Scroll Test",
           role: "JavaScript/SVG",
           title: "Draw Scroll SVG",

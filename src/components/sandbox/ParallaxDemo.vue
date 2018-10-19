@@ -1,6 +1,6 @@
 <template>
   <div id="parallax">
-    <div class="bg-1 wrapper-flex" :style= "{ 'background-image': 'url(' + img1 + ')' }">
+    <div class="bg-1 wrapper-flex">
       <h3>Sandbox</h3>
     </div>
   </div>
@@ -9,11 +9,6 @@
 <script>
 //import img1 from "@/assets/img/parallax_bg1.png";
 export default {
-  data() {
-    return {
-      img1: require("@/assets/img/parallax_bg1.png")
-    };
-  }
 };
 </script>
 
